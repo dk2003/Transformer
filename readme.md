@@ -3,6 +3,33 @@
 > github 地址：[Transformer](https://github.com/hkproj/pytorch-transformer/blob/main/train.py)
 > 理论部分：[Attention is all you need](https://ktv422gwig.feishu.cn/wiki/COSEwUT8CiJ7YvkCckHcVxREnfc)
 
+## github 推送
+* 推送到远程仓库
+```bash
+# 在项目根目录执行以下命令（假设项目在c:\Raindropsss\AI\attention\Transformer）
+cd c:\Raindropsss\AI\attention\Transformer
+# 初始化本地仓库
+git init
+# 添加所有文件（已包含.gitignore过滤规则）
+git add .
+# 提交初始版本
+git commit -m "feat: Initial transformer implementation"
+# 在GitHub创建新仓库（假设仓库名为Transformer）
+# 创建后执行远程仓库连接（替换<your_username>为实际用户名）
+git remote add origin https://github.com/<your_username>/Transformer.git
+# 推送代码
+git push -u origin main
+```
+* 常见错误
+```bash
+fatal: unable to access 'https://github.com/dk2003/Transformer.git/': Failed to connect to github.com port 443 after 21077 ms: Could not connect to server
+```
+* 解决方法：将下面的端口设置为代理服务器的端口
+```bash
+git config --global http.proxy http://127.0.0.1:10809
+git config --global https.proxy http://127.0.0.1:10809
+```
+
 ## 模型结构图
 ![model structure](./structure/transformer.png)
 
